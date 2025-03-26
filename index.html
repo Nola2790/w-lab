@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
+            background-color: #0e0c0c8e;
+            margin: 0;
+            padding: 0;
+            background-image: url('file:///C:/music_shop/k.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            padding: 50px 20px;
+            color: #7087aa;
+        }
+
+        .profile-picture {
+            width: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .btnn {
+            width: 90%;
+            color: #7e7233;
+            background: #95dfdf;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.4s ease;
+        }
+        .btnhover{
+            background: #529494;
+            color: #f8c194;
+            width: 90%;
+
+
+
+        }
+        h2 {
+        color: #522021; 
+        }
+        .content {
+    background-color: #1d1e1f; 
+}
+
+#home {
+    background-color: #141414; 
+}
+
+#about {
+    background-color: #161618; 
+
+#contact {
+    background-color: #0c0c0c; 
+}
+
+
+        
+     .container{
+    
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+         
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <img src="file:///C:/music_shop/c.jpg" alt="Profile Picture" class="profile-picture"> <!-- Add your profile picture URL here -->
+        <div>
+            <h1>Welcome to My Portfolio :)</h1>
+            <p>I'm Mariamawit, a passionate computer science student.</p>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+      
+            <div class="content bg-light rounded shadow p-4 my-3" id="home">
+                <h2>Home</h2>
+                <p>Hello! Welcome to my website! I'm Mariamawit, a passionate computer science student. You can find my portfolio here.</p>
+            </div>
+            <div class="content bg-light rounded shadow p-4 my-3" id="about">
+                <h2>About Me</h2>
+                <p>I am a computer science student passionate about computers, their language, and how they work. I'm in the process of learning programming languages and enjoy working on innovative projects. My goal is to become a software engineer and contribute to meaningful technology solutions.</p>
+           
+        </div>
+            <div class="content bg-light rounded shadow p-4 my-3" id="contact">
+                <h2>Contact</h2>
+                <p>Enter your Email to contact me:</p>
+                <p>Sign up Here:</p>
+                <div class="form">
+
+
+<input type="email" class="form-control my-2" name="email" placeholder="Enter Email Here" required style="width: 90%;">
+                    <input type="password" class="form-control my-2" name="password" placeholder="Enter Password Here"  required style="width: 90%;">
+                    <button class="btnn">Sign up</button>
+                </div>
+            </div>
+            <div>
+                <div class=" content bg-light rounded shadow p-4 my-3" id="services">
+                    <h2>Services</h2>
+                    <p>As a beginner coder, I'm currently building my skills in web development and programming. Some of the areas where  I can help are:</p>
+                    <ul>
+                        <li>I can create simple websites using HTML, CSS, and JavaScript.</li>
+                        <li>I can help review your code and offer suggestions for improvement.</li>
+                        <li>Are you looking for a coding friend? If so, I’m open to collaborating on small projects and learning together!</li>
+                        <li>I can assist with troubleshooting basic coding issues.</li>
+                    </ul>
+                    <p>I'm excited to grow my skills and take on new challenges, so feel free to reach out if you have a project in mind!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <!-- Bootstrap JS and dependencies (jQuery and Popper.js) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
