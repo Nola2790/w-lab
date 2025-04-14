@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Results Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        #dashboard {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .student {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h3 {
+            margin: 0 0 10px;
+        }
+        p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Student Results Dashboard</h1>
+    <div id="dashboard"></div>
+
+    <script>
+        const students = [
+            { name: "Ali", scores: [85, 90, 78] },
+            { name: "Ahmed", scores: [32, 45, 28] },
+            { name: "Mile", scores: [60, 75, 80] },
+            { name: "David", scores: [90, 92, 88] }
+        ];
+
+        const calculateTotal = (scores) => scores.reduce((acc, score) => acc + score, 0);
+        const calculateAverage = (total, count) => total / count;
+        const assignGrade = (average) => {
+            if (average >= 90) return 'A+';
+            if (average >= 85) return 'A';
+            if (average >= 80) return 'A-';
+            if (average >= 75) return 'B+';
+            if (average >= 70) return 'B'; 
+            if (average >= 65) return 'B-';
+            if (average >= 60) return 'C+';
+            if (average >= 55) return 'C';
+            if (average >= 50) return 'C-';
+            if (average >= 45) return 'D+';
+            if (average >= 40) return 'D';
+            if (average >= 35) return 'D-';
+            return 'F';
+        };
+        const determinePassFail = (scores) => scores.some(score => score < 35) ? 'Fail' : 'Pass';
+
+        const results = students.map(student => {
+            const total = calculateTotal(student.scores);
+            const average = calculateAverage(total, student.scores.length);
+            const grade = assignGrade(average);
+            const status = determinePassFail(student.scores);
+            
+            return {
+                name: student.name,
+                total,
+                average: average.toFixed(2),
+                grade,
+                status
+            };
+        });
+
+       
+        const dashboard = document.getElementById("dashboard");
+
+        results.forEach(result => {
+            const studentDiv = document.createElement("div");
+            studentDiv.className = "student";
+            studentDiv.innerHTML = `
+                <h3>${result.name}</h3>
+                <p>Total Score: ${result.total}</p>
+                <p>Average Score: ${result.average}</p>
+                <p>Grade: <strong>${result.grade}</strong></p>
+                <p>Status: <strong>${result.status}</strong></p>
+            `;
+            
+          
+            dashboard.appendChild(studentDiv);
+        });
+
+        console.log("Student Results:", results);
+    </script>
+
+</body>
+</html>
